@@ -8,7 +8,7 @@ Solutions will be written in modern vanilla JavaScript, in as-functional-as-poss
 
 I added a small Node.js script to make it easy to run, see *Usage* section below.
 
-I won't be commiting the inputs I'll be getting from AoC, if you want to run it by yourself, put your input files as `day-n.txt` files in `inputs` directory.
+I won't be commiting the inputs I'll be getting from AoC, if you want to run it by yourself, put your input files as `day-n.txt` files in `inputs` directory. For certain puzzles line endings are important; they should have LF line endings (e.g. Day 3 will give the wrong answer if it's CRLF).
 
 ## Usage
 ```node index.js [day] [puzzle]```
