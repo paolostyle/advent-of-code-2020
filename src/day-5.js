@@ -20,8 +20,11 @@ const puzzle2 = (input) => {
   const allSeatIdsExceptMine = getPasses(input).map(getSeatId);
   const minSeatId = Math.min(...allSeatIdsExceptMine);
   const maxSeatId = Math.max(...allSeatIdsExceptMine);
-  const allSeatIds = Array.from({ length: maxSeatId - minSeatId + 1 }, (_, index) => minSeatId + index);
-  return allSeatIds.find(id => !allSeatIdsExceptMine.includes(id));
+  const allSeatIds = Array.from(
+    { length: maxSeatId - minSeatId + 1 },
+    (_, index) => minSeatId + index
+  );
+  return allSeatIds.find((id) => !allSeatIdsExceptMine.includes(id));
 };
 
 module.exports = {

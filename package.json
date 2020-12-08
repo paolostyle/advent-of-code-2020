@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/paolostyle/advent-of-code-2020/issues"
   },
-  "homepage": "https://github.com/paolostyle/advent-of-code-2020#readme"
+  "homepage": "https://github.com/paolostyle/advent-of-code-2020#readme",
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  }
 }
