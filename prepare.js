@@ -11,7 +11,9 @@ try {
 
 const day = process.argv[2];
 const cookie = fs.readFileSync('cookie.txt', 'utf-8');
-const template = `const puzzle1 = (input) => {};
+const template = `const getInput = (input) => input.split('\\n');
+
+const puzzle1 = (input) => {};
 
 const puzzle2 = (input) => {};
 
