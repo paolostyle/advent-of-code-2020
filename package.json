@@ -2,9 +2,10 @@
   "name": "advent-of-code-2020",
   "version": "1.0.0",
   "description": "Solutions for Advent of Code 2020 challenges",
-  "main": "index.js",
+  "main": "run.js",
   "scripts": {
-    "start": "node index.js"
+    "run": "node run",
+    "prepare": "node prepare"
   },
   "repository": {
     "type": "git",
