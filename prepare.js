@@ -37,24 +37,16 @@ if (!fs.existsSync('inputs')) {
 
 console.log('Downloading input file...');
 https
-  .request(
-    {
-      host: 'adventofcode.com',
-      path: `/2020/day/${day}/input`,
-      method: 'GET',
-      headers: { cookie },
-    },
-    (response) => {
-      let buffer;
-      response.on('data', (chunk) => {
-        buffer = chunk;
-      });
-      response.on('end', () => {
-        const filename = `inputs/day-${day}.txt`;
-        const str = buffer.toString('utf8').trim();
-        fs.writeFileSync(filename, str);
-        console.log(`Input data saved to ${filename}`);
-      });
-    }
-  )
+  .get(`https://adventofcode.com/2020/day/${day}/input`, { headers: { cookie } }, (response) => {
+    let buffer = '';
+    response.on('data', (chunk) => {
+      buffer += chunk;
+    });
+    response.on('end', () => {
+      const filename = `inputs/day-${day}.txt`;
+      const str = buffer.trim();
+      fs.writeFileSync(filename, str);
+      console.log(`Input data saved to ${filename}`);
+    });
+  })
   .end();
