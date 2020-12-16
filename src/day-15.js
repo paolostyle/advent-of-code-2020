@@ -31,7 +31,7 @@ const algorithm = (input, searchedTurn) => {
   return lastNumberSaid;
 };
 
-const puzzle1 = (input) => algorithm(input, 20);
+const puzzle1 = (input) => algorithm(input, 2020);
 
 // it took hilariously long to get the result (almost 5 minutes) but I don't think I care enough
 const puzzle2 = (input) => algorithm(input, 30000000);
